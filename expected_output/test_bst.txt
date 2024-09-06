@@ -1,0 +1,67 @@
+$ ./test_bst
+== Creating BST...
+
+== Inserting 13 values into BST...
+
+== Checking correct value from bst_size(): 13 (expected 13)
+
+== Checking correct value from bst_height(): 3 (expected 3)
+
+== Looking up values we know should be in the BST...
+  -- bst_get( 64):  64 (expected  64)
+  -- bst_get( 32):  32 (expected  32)
+  -- bst_get( 96):  96 (expected  96)
+  -- bst_get( 16):  16 (expected  16)
+  -- bst_get( 48):  48 (expected  48)
+  -- bst_get( 80):  80 (expected  80)
+  -- bst_get(112): 112 (expected 112)
+  -- bst_get(  8):   8 (expected   8)
+  -- bst_get( 24):  24 (expected  24)
+  -- bst_get( 56):  56 (expected  56)
+  -- bst_get( 88):  88 (expected  88)
+  -- bst_get(104): 104 (expected 104)
+  -- bst_get(120): 120 (expected 120)
+
+== Looking up values we know should NOT be in the BST...
+
+== Checking path sums the BST should contain:
+  == 120: all good
+  == 136: all good
+  == 200: all good
+  == 328: all good
+  == 376: all good
+  == 392: all good
+
+== Checking path sums the BST should NOT contain:
+  -- found 0 paths sums we shouldn't have found
+
+== Checking range sums in the BST:
+  -- bst_range_sum(8, 120): 848 (expected 848)
+  -- bst_range_sum(0, 200): 848 (expected 848)
+  -- bst_range_sum(2, 40): 80 (expected 80)
+  -- bst_range_sum(24, 60): 160 (expected 160)
+  -- bst_range_sum(30, 90): 368 (expected 368)
+  -- bst_range_sum(60, 70): 64 (expected 64)
+  -- bst_range_sum(60, 112): 544 (expected 544)
+  -- bst_range_sum(84, 110): 288 (expected 288)
+  -- bst_range_sum(96, 96): 96 (expected 96)
+  -- bst_range_sum(125, 200): 0 (expected 0)
+
+== Removing keys from BST...
+  -- key  16 correctly removed from BST
+  -- key  48 correctly removed from BST
+  -- key  64 correctly removed from BST
+  -- key 104 correctly removed from BST
+
+== Checking correct value from bst_size(): 9 (expected 9)
+
+== Looking up values we know should still be in the BST...
+  -- bst_get(  8):   8 (expected   8)
+  -- bst_get( 24):  24 (expected  24)
+  -- bst_get( 32):  32 (expected  32)
+  -- bst_get( 56):  56 (expected  56)
+  -- bst_get( 80):  80 (expected  80)
+  -- bst_get( 88):  88 (expected  88)
+  -- bst_get( 96):  96 (expected  96)
+  -- bst_get(112): 112 (expected 112)
+  -- bst_get(120): 120 (expected 120)
