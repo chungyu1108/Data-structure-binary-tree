@@ -1,13 +1,3 @@
-# Assignment 3
-**Due at 11:59pm on Monday, 11/15/2021** <br/>
-**Demo due by 11:59pm on Monday 11/29/2021**
-
-This assignment is intended to have you start to explore non-linear data structures by implementing a binary search tree (BST).  After implementing the BST, you'll solve some BST-based puzzle problems.  The requirements for the assignment are described below.
-
-For this assignment, you are provided with some starter code that defines the structures you'll be working with and prototypes the functions you'll be writing and also provides some data structures upon which to build a BST implementation.  It's important that you don't modify the function prototypes specified in `bst.h`. To help grade your assignment, we will use a set of tests that assume these functions exist and have the same prototypes that are defined in those files. If you change the prototypes, it will cause the tests to break, and your grade for the assignment will likely suffer.
-
-Feel free to add any additional functions you might need to `bst.c`.
-
 ## 1. Implement a binary search tree
 
 Your main task for this assignment is to implement a [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree) (BST).  A BST is a tree-structured data type that allows fast insertions, lookups, and removals by structuring itself in a way that encodes the behavior of binary search.  Specifically, each node in a BST has at most two children, a left child and a right child, and every node satisfies the BST property, which requires that all values stored in a node's left subtree must be less than that node's value, while all values stored in a node's right subtree must be greater than or equal to that node's value.
@@ -99,27 +89,3 @@ Example output of the testing program using a correct BST implementation is prov
 
 In order to verify that your memory freeing functions work correctly, it will be helpful to run the testing application through `valgrind`.
 
-## Submission
-
-As always, we'll be using GitHub Classroom for this assignment, and you will submit your assignment via GitHub. Just make sure your completed files are committed and pushed by the assignment's deadline to the master branch of the GitHub repo that was created for you by GitHub Classroom for this assignment. A good way to check whether your files are safely submitted is to look at the master branch of your assignment repo on the github.com website (i.e. https://github.com/osu-cs261-f21/assignment-3-YourGitHubUsername/). If your changes show up there, you can consider your files submitted.
-
-## Grading criteria
-
-Your program **MUST** compile and run on `access.engr.oregonstate.edu` (or `flip`), so make sure you have tested your work there before you make your final submission, since a program that compiles and runs in one environment may not compile and run in another.  **Assignments that do not compile on `access` or `flip` may receive a grade of 0.**  If you do not have an ENGR account, you can create one at https://teach.engr.oregonstate.edu/.
-
-The assignment is worth 100 total points, broken down as follows:
-
-* 85 points: essential BST functionality
-  * 10 points: `bst_create()` correctly allocates and initializes a BST
-  * 5 points: `bst_free()` correctly frees the memory allocated to a BST with no memory leaks
-  * 10 points: `bst_size()` correctly determines the number of elements in a BST
-  * 25 points: `bst_insert()` correctly inserts a key/value pair into a BST, maintaining the BST property with respect to all keys in the tree
-  * 25 points: `bst_remove()` correctly removes a key/value pair from a BST based on a specified key, maintaining the BST property with respect to all keys in the tree
-  * 10 points: `bst_get()` correctly retrieves the value associated with a given key in a BST
-
-* 15 points: BST "puzzles"
-  * 5 points: `bst_height()` correctly computes the height of a BST
-  * 5 points: `bst_path_sum()` correctly validates a path sum in a BST
-  * 5 points: `bst_range_sum()` correctly computes a range sum in a BST
-
-You can also earn up to 10 points of extra credit for implementing an in-order BST iterator as described above.  Again, to earn full credit, your iterator must have worst-case O(h) space complexity, where h is the height of the tree.
